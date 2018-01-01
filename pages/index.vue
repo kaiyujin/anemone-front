@@ -5,12 +5,12 @@
       <h1 class="title">
         anemone
       </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+        <figure class="chart" data-percent="75">
+          <svg width="200" height="200">
+            <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+          </svg>
+	</figure>
       </div>
     </div>
   </section>
@@ -54,5 +54,25 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+svg .outer {
+  stroke: #e34f26;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 20;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+.chart:hover .outer {
+  stroke-dashoffset: 534 !important;
+  -webkit-animation-play-state: paused;
 }
 </style>
