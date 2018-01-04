@@ -45,6 +45,10 @@ export default {
         g2.append('path').datum({startAngle: TAU * t2a(3), endAngle: TAU * t2a(5, 30)}).style('fill', '#e34f26').attr('d', arc)
         g2.append('path').datum({startAngle: TAU * t2a(6), endAngle: TAU * t2a(11, 59)}).style('fill', '#e34f26').attr('d', arc)
       })
+    g.append('path').datum({startAngle: TAU * t2a(6), endAngle: TAU * t2a(7)}).style('fill', '#e34f26').attr('d', arc)
+    g.append('path').datum({startAngle: TAU * t2a(7), endAngle: TAU * t2a(8)}).style('fill', '#e34f26').attr('d', arc)
+    g.append('path').datum({startAngle: TAU * t2a(8), endAngle: TAU * t2a(9, 30)}).style('fill', '#e34f26').attr('d', arc)
+    g.append('rect').attr('x', -40).attr('y', -40).attr('width', 80).attr('height', 80).attr('fill', '#cd5c5c')
   }
 }
 </script>
